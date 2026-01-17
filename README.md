@@ -1,2 +1,1 @@
-# FaithLockApp
 # PoopMate
