@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://poopmate.app/sitemap.xml

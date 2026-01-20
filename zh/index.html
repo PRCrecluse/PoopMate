@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PoopMate 排便追踪器 | 便便提醒与排便日志</title>
+  <meta name="description" content="PoopMate 是 AI 排便追踪器，记录排便、设置提醒、快速获取 AI 评估，帮助建立稳定排便习惯。">
+  <meta name="keywords" content="排便追踪, 便便提醒, 排便日志, 便秘, 肠道健康, PoopMate, AI 排便追踪器">
+  <meta name="robots" content="index,follow,max-image-preview:large">
+  <link rel="canonical" href="https://poopmate.app/zh/">
+  <link rel="alternate" hreflang="en" href="https://poopmate.app/">
+  <link rel="alternate" hreflang="zh-CN" href="https://poopmate.app/zh/">
+  <link rel="alternate" hreflang="x-default" href="https://poopmate.app/">
+  <meta property="og:title" content="PoopMate 排便追踪器">
+  <meta property="og:description" content="AI 排便追踪、便便提醒与排便日志，帮助建立稳定排便习惯。">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://poopmate.app/zh/">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="PoopMate 排便追踪器">
+  <meta name="twitter:description" content="AI 排便追踪、便便提醒与排便日志。">
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Organization",
+          "name": "PoopMate",
+          "url": "https://poopmate.app/",
+          "email": "prcrecluse@gmail.com"
+        },
+        {
+          "@type": "SoftwareApplication",
+          "name": "PoopMate AI Poop Tracker",
+          "applicationCategory": "HealthApplication",
+          "operatingSystem": "iOS",
+          "url": "https://poopmate.app/zh/",
+          "description": "AI 排便追踪器，提供便便提醒、排便日志与快速 AI 评估。",
+          "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+          }
+        }
+      ]
+    }
+  </script>
+  <style>
+    :root {
+      --primary: #ff9f0a;
+      --text: #0f0f0f;
+      --muted: #6b7280;
+      --bg: #ffffff;
+      --card: #f5f5f7;
+      --border: #e5e7eb;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      color: var(--text);
+      background: var(--bg);
+    }
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 32px;
+      border-bottom: 1px solid var(--border);
+      position: sticky;
+      top: 0;
+      background: var(--bg);
+      z-index: 10;
+    }
+    .nav-links {
+      display: flex;
+      gap: 20px;
+    }
+    .nav-links a {
+      text-decoration: none;
+      color: var(--text);
+      font-weight: 600;
+    }
+    .hero {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 64px 24px 40px;
+      display: grid;
+      gap: 20px;
+    }
+    .hero h1 {
+      font-size: 3rem;
+      margin: 0;
+    }
+    .hero p {
+      color: var(--muted);
+      font-size: 1.1rem;
+      max-width: 720px;
+    }
+    .hero img {
+      width: 100%;
+      max-width: 560px;
+      border-radius: 24px;
+    }
+    .cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      padding: 12px 18px;
+      border-radius: 999px;
+      background: var(--primary);
+      color: #1f2937;
+      text-decoration: none;
+      font-weight: 700;
+      width: fit-content;
+    }
+    .section {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 24px 56px;
+    }
+    .section h2 {
+      margin: 0 0 16px;
+      font-size: 2rem;
+    }
+    .grid {
+      display: grid;
+      gap: 20px;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    }
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 20px;
+      display: grid;
+      gap: 10px;
+    }
+    .card p {
+      margin: 0;
+      color: var(--muted);
+    }
+    .faq details {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 14px;
+    }
+    .faq details + details {
+      margin-top: 12px;
+    }
+    footer {
+      padding: 36px 24px;
+      text-align: center;
+      color: var(--muted);
+      border-top: 1px solid var(--border);
+    }
+    @media (max-width: 720px) {
+      nav {
+        flex-direction: column;
+        gap: 12px;
+      }
+      .hero h1 {
+        font-size: 2.2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <div>PoopMate</div>
+    <div class="nav-links">
+      <a href="/zh/">首页</a>
+      <a href="/zh/blog.html">Blog</a>
+      <a href="mailto:prcrecluse@gmail.com">支持</a>
+    </div>
+  </nav>
+  <section class="hero">
+    <h1>AI 排便追踪器，建立稳定排便习惯</h1>
+    <p>记录每次排便、设置便便提醒、快速获取 AI 评估，让排便管理更清晰、更安心。</p>
+    <a class="cta" href="https://apps.apple.com/cn/app/faithlock-pray-christian-focus/id6756815467">立即下载 PoopMate</a>
+    <img src="../assets/中文1.png" alt="PoopMate 排便追踪器界面" loading="lazy" decoding="async">
+  </section>
+  <section class="section">
+    <h2>PoopMate 能做什么</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>秒级 AI 评估</h3>
+        <p>拍照即可获得清晰的排便健康提示。</p>
+      </div>
+      <div class="card">
+        <h3>便便提醒</h3>
+        <p>按星期与时间设置提醒，保持规律。</p>
+      </div>
+      <div class="card">
+        <h3>排便日志</h3>
+        <p>记录形态、颜色、血迹与舒适度。</p>
+      </div>
+      <div class="card">
+        <h3>趋势统计</h3>
+        <p>按周/月查看频次与变化。</p>
+      </div>
+    </div>
+  </section>
+  <section class="section">
+    <h2>Blog 与问答</h2>
+    <div class="card">
+      <p>我们整理了便秘、肠道健康、排便习惯养成等话题的实用内容。</p>
+      <a class="cta" href="/zh/blog.html">查看 Blog</a>
+    </div>
+  </section>
+  <section class="section faq">
+    <h2>常见问题</h2>
+    <details>
+      <summary>PoopMate 适合哪些人？</summary>
+      <p>适合需要规律排便提醒的人群、便秘用户，以及希望长期记录排便习惯的人。</p>
+    </details>
+    <details>
+      <summary>PoopMate 是便便提醒器吗？</summary>
+      <p>是的，支持按星期与具体时间设置提醒。</p>
+    </details>
+    <details>
+      <summary>PoopMate 和卡路里追踪有关吗？</summary>
+      <p>没有关系，PoopMate 专注排便与肠道健康。</p>
+    </details>
+  </section>
+  <footer>
+    © PoopMate
+  </footer>
+</body>
+</html>
