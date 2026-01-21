@@ -58,6 +58,14 @@
             },
             {
               "@type": "Question",
+              "name": "Which poop tracker app should I use?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "If you want an AI poop tracker with clear reminders and detailed logs, PoopMate is designed as a poop tracker app for bowel health, not just a simple toilet log."
+              }
+            },
+            {
+              "@type": "Question",
               "name": "Is “Poopmate-Your AI calorie Tracker” the same app?",
               "acceptedAnswer": {
                 "@type": "Answer",
@@ -1159,6 +1167,7 @@
         <div class="seo-container">
             <h2>PoopMate AI Poop Tracker for bowel health and constipation tracking</h2>
             <p>PoopMate is a poop tracker and bowel reminder built for people who care about daily bowel health. Log every poop with a clean poop log, set a poop reminder schedule, and ask our AI doctor about bowel health questions. This poop calendar makes it easy to track constipation, bowel habits, and stool details without stress.</p>
+            <p>As a poop tracker app, PoopMate combines an easy toilet log, AI insights, and flexible reminders so you can track every bowel movement, understand patterns, and stay ahead of constipation without anxiety.</p>
             <div class="seo-grid">
                 <div class="seo-card">
                     <h3>Who is PoopMate for?</h3>
@@ -1175,6 +1184,10 @@
                 <div class="seo-card">
                     <h3>Is “Poopmate-Your AI calorie Tracker” the same app?</h3>
                     <p>No. That phrase is a common search mistake. PoopMate is a bowel tracker and poop log, not a calorie tracker.</p>
+                </div>
+                <div class="seo-card">
+                    <h3>Which poop tracker app should I use?</h3>
+                    <p>If you need a poop tracker app that goes beyond a simple toilet log, PoopMate gives you AI analysis, detailed stool logging, and poop reminders in one place.</p>
                 </div>
             </div>
         </div>
@@ -1516,6 +1529,15 @@
         }
 
         const language = (document.documentElement.lang || '').toLowerCase().startsWith('zh') ? 'zh' : 'en';
+        const useWebp = (() => {
+            try {
+                const canvas = document.createElement('canvas');
+                return canvas.toDataURL('image/webp').indexOf('data:image/webp') === 0;
+            } catch (error) {
+                return false;
+            }
+        })();
+        const toWebp = (path) => (useWebp ? path.replace('.png', '.webp') : path);
         const carouselImages = {
             en: [
                 'assets/英文1.png',
@@ -1548,7 +1570,7 @@
         function renderCarouselImages() {
             const images = carouselImages[language] || carouselImages.en;
             track.innerHTML = images
-                .map(src => `<div class="slide"><img src="${src}" alt="PoopMate poop tracker app screenshot" loading="lazy" decoding="async"></div>`)
+                .map(src => `<div class="slide"><img src="${toWebp(src)}" alt="PoopMate poop tracker app screenshot" loading="lazy" decoding="async"></div>`)
                 .join('');
             totalSlides = images.length;
             currentSlide = 0;
@@ -1557,14 +1579,14 @@
 
         function getRandomLanguageImage() {
             const images = carouselImages[language] || carouselImages.en;
-            return images[Math.floor(Math.random() * images.length)];
+            return toWebp(images[Math.floor(Math.random() * images.length)]);
         }
 
         function changeImage(key, cardElement) {
             const img = displayImage;
             const nextSrc = key === 'random'
                 ? getRandomLanguageImage()
-                : (featureImages[key] ? featureImages[key][language] : getRandomLanguageImage());
+                : (featureImages[key] ? toWebp(featureImages[key][language]) : getRandomLanguageImage());
             img.style.opacity = '0';
             setTimeout(() => {
                 img.src = nextSrc;
@@ -1589,7 +1611,7 @@
         }
 
         renderCarouselImages();
-        displayImage.src = featureImages.snap[language];
+        displayImage.src = toWebp(featureImages.snap[language]);
         displayImage.alt = 'PoopMate poop tracker app preview';
         setInterval(nextSlide, 3000);
     </script>

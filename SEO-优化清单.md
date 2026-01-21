@@ -16,9 +16,13 @@
 - 多语言 SEO：独立中文/英文 URL 与 hreflang
 - 独立 Blog 页面：新增 blog.html 与 /zh/blog.html 长内容入口
 - 图片加载：首页与 Blog 关键图片已开启懒加载
+- 图片体积与加载：生成 WebP 并替换页面图片引用
+- 内容扩展：Blog 新增“补水/纤维/习惯养成”等长尾话题
+- poop tracker 相关：新增 poop tracker 专属 FAQ 与说明段落
+- poop tracker 相关：Blog 中增加「如何选择 poop tracker app」中英文文章骨架
 
 ## 仍未完成
-- 图片体积与加载：压缩图片、生成 WebP、全站尺寸优化
+- 图片体积与加载：压缩图片、全站尺寸优化
 - 性能与速度：减少阻塞资源、合并/拆分 CSS、首屏加载优化
 - 站点权威：Google Search Console / Bing Webmaster 绑定与提交站点地图
 - 站外增长：外链与行业目录收录
@@ -26,5 +30,5 @@
 
 ## 下一步建议
 - 继续补齐 Blog 长内容，覆盖“便秘、肠道健康、排便习惯养成”等长尾词
-- 绑定并验证 Google Search Console / Bing Webmaster
-- 进行图片 WebP/压缩与首屏性能优化
+- 绑定并验证 Google Search Console / Bing Webmaster，并持续观察 poop tracker 词表现
+- 进行图片压缩与首屏性能优化（减少首屏体积、提升 LCP）
